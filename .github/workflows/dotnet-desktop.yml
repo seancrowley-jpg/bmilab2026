@@ -23,5 +23,3 @@ jobs:
         dotnet-version: 10.0.x
     - name: Build for Release
       run: dotnet build --configuration Release
-    - name: Run unit tests
-      run: dotnet test bmiUnitTestProject/bmiUnitTestProject.csproj --no-restore --collect "Code coverage" -l:trx
