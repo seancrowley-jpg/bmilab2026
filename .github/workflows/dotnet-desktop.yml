@@ -3,7 +3,7 @@ name: bmi_lab__week_1_2026                                        # "BMI_CI" wor
 env:
   AZURE_WEBAPP_NAME: MyFirstAzureApp20261010135602         # set this to your application's name
   
-  AZURE_WEBAPP_PACKAGE_PATH: 'publish/myapp'        # set this to the path to your web app project
+  AZURE_WEBAPP_PACKAGE_PATH: 'site\wwwroot'        # set this to the path to your web app project
 
 
 on:
@@ -30,4 +30,4 @@ jobs:
       with: 
         app-name: ${{ env.AZURE_WEBAPP_NAME }}                        # your app name
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE  }} # Define secret variable in repository settings as per action documentation
-        package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
+        package: 'bmi2021/${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
